@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClientApp", "ClientApp", "{
 		src\ClientApp\.browserslistrc = src\ClientApp\.browserslistrc
 		src\ClientApp\.editorconfig = src\ClientApp\.editorconfig
 		src\ClientApp\angular.json = src\ClientApp\angular.json
+		src\ClientApp\Dockerfile = src\ClientApp\Dockerfile
 		src\ClientApp\src\index.html = src\ClientApp\src\index.html
 		src\ClientApp\karma.conf.js = src\ClientApp\karma.conf.js
 		src\ClientApp\src\main.ts = src\ClientApp\src\main.ts
@@ -40,6 +41,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trip-planner-unittests", "test\trip-planner-unittests\trip-planner-unittests.csproj", "{598F1C35-2949-4F9F-AB74-BDD30E23DB4F}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{44E67CBC-547B-40CB-94DB-1192696E723F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{6C930EE5-B383-4955-8871-BE2FDEC3ACE7}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
