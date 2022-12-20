@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  trip-planner-api:
+    image: ${DOCKER_REGISTRY-}tripplannerapi
+    build:
+      context: .
+      dockerfile: src/trip-planner-api/Dockerfile
+
+  trip-planner-app:
+    image: ${DOCKER_REGISTRY-}tripplannerapp
+    build:
+      context: .
+      dockerfile: src/ClientApp/Dockerfile

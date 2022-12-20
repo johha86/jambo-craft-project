@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32210.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1CB036B1-3A65-4E66-93A6-F9FD92FF9137}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClientApp", "ClientApp", "{02372A99-450F-488B-84E4-F2D7231D0FCB}"
+	ProjectSection(SolutionItems) = preProject
+		src\ClientApp\.browserslistrc = src\ClientApp\.browserslistrc
+		src\ClientApp\.editorconfig = src\ClientApp\.editorconfig
+		src\ClientApp\angular.json = src\ClientApp\angular.json
+		src\ClientApp\Dockerfile = src\ClientApp\Dockerfile
+		src\ClientApp\src\index.html = src\ClientApp\src\index.html
+		src\ClientApp\karma.conf.js = src\ClientApp\karma.conf.js
+		src\ClientApp\src\main.ts = src\ClientApp\src\main.ts
+		src\ClientApp\package-lock.json = src\ClientApp\package-lock.json
+		src\ClientApp\package.json = src\ClientApp\package.json
+		src\ClientApp\src\polyfills.ts = src\ClientApp\src\polyfills.ts
+		src\ClientApp\proxy.conf.js = src\ClientApp\proxy.conf.js
+		src\ClientApp\src\styles.css = src\ClientApp\src\styles.css
+		src\ClientApp\src\test.ts = src\ClientApp\src\test.ts
+		src\ClientApp\tsconfig.app.json = src\ClientApp\tsconfig.app.json
+		src\ClientApp\tsconfig.json = src\ClientApp\tsconfig.json
+		src\ClientApp\tsconfig.spec.json = src\ClientApp\tsconfig.spec.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{35AC62D2-409C-43BE-8D78-F2E3F5FA7948}"
+	ProjectSection(SolutionItems) = preProject
+		src\ClientApp\src\index.html = src\ClientApp\src\index.html
+		src\ClientApp\src\main.ts = src\ClientApp\src\main.ts
+		src\ClientApp\src\polyfills.ts = src\ClientApp\src\polyfills.ts
+		src\ClientApp\src\styles.css = src\ClientApp\src\styles.css
+		src\ClientApp\src\test.ts = src\ClientApp\src\test.ts
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trip-planner-api", "src\trip-planner-api\trip-planner-api.csproj", "{231AADE1-40E4-4FD3-AB1C-63975CED0D79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{01A914E5-1786-436F-8A37-76902B7AC249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trip-planner-unittests", "test\trip-planner-unittests\trip-planner-unittests.csproj", "{598F1C35-2949-4F9F-AB74-BDD30E23DB4F}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{44E67CBC-547B-40CB-94DB-1192696E723F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{6C930EE5-B383-4955-8871-BE2FDEC3ACE7}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{231AADE1-40E4-4FD3-AB1C-63975CED0D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231AADE1-40E4-4FD3-AB1C-63975CED0D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231AADE1-40E4-4FD3-AB1C-63975CED0D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231AADE1-40E4-4FD3-AB1C-63975CED0D79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{598F1C35-2949-4F9F-AB74-BDD30E23DB4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{598F1C35-2949-4F9F-AB74-BDD30E23DB4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{598F1C35-2949-4F9F-AB74-BDD30E23DB4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{598F1C35-2949-4F9F-AB74-BDD30E23DB4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44E67CBC-547B-40CB-94DB-1192696E723F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E67CBC-547B-40CB-94DB-1192696E723F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E67CBC-547B-40CB-94DB-1192696E723F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E67CBC-547B-40CB-94DB-1192696E723F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02372A99-450F-488B-84E4-F2D7231D0FCB} = {1CB036B1-3A65-4E66-93A6-F9FD92FF9137}
+		{35AC62D2-409C-43BE-8D78-F2E3F5FA7948} = {02372A99-450F-488B-84E4-F2D7231D0FCB}
+		{231AADE1-40E4-4FD3-AB1C-63975CED0D79} = {1CB036B1-3A65-4E66-93A6-F9FD92FF9137}
+		{598F1C35-2949-4F9F-AB74-BDD30E23DB4F} = {01A914E5-1786-436F-8A37-76902B7AC249}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F47B1567-866D-4C5F-9D48-2899BF0806B7}
+	EndGlobalSection
+EndGlobal
