@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace trip_planner_api.Controllers
+namespace TripPlannerApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
