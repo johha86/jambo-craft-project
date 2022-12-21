@@ -15,7 +15,7 @@ export class HomeComponent {
     currentWeekWeather: ''
   };
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+  constructor(http: HttpClient) {
     http.get<TripPlannerDto>(`${environment.apiURL}City`).subscribe(result => {
       this.forecasts = result.citiesInfo;
     }, error => console.error(error));
