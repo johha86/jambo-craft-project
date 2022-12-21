@@ -3,7 +3,7 @@
 namespace TripPlannerApi.Models.Entities
 {
     [BsonIgnoreExtraElements]
-    public class Weather
+    public class WeatherForecast
     {
         public string Temperature { get; set; } = null!;
         public string Summary { get; set; } = null!;

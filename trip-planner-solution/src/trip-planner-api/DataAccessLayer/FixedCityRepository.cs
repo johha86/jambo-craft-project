@@ -39,9 +39,9 @@ namespace TripPlannerApi.DataAccessLayer
                 }
             };
 
-            static Weather CreateNewWeatherForcast()
+            static WeatherForecast CreateNewWeatherForcast()
             {
-                return new Weather()
+                return new WeatherForecast()
                 {
                     Summary = RandomWeatherRepository.Summaries[Random.Shared.Next(RandomWeatherRepository.Summaries.Length)],
                     Temperature = Random.Shared.Next(-20, 55).ToString()

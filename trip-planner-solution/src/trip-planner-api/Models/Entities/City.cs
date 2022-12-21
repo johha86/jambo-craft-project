@@ -14,8 +14,8 @@ namespace TripPlannerApi.Models.Entities
 
         public string ShortDescription { get; set; } = null!;
 
-        public Weather CurrentWeather { get; set; } = null!;
+        public WeatherForecast CurrentWeather { get; set; } = null!;
 
-        public Weather CurrentWeekWeather { get; set; } = null!;
+        public WeatherForecast CurrentWeekWeather { get; set; } = null!;
     }
 }

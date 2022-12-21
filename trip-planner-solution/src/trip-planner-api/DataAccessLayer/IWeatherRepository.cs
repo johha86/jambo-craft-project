@@ -7,7 +7,7 @@ namespace TripPlannerApi.DataAccessLayer
     /// </summary>
     public interface IWeatherRepository
     {
-        public Task<Weather> GetCurrentWeatherForCity(int id);
-        public Task<Weather> GetCurrentWeekWeatherForCity(int id);
+        public Task<WeatherForecast> GetCurrentWeatherForCity(int id);
+        public Task<WeatherForecast> GetCurrentWeekWeatherForCity(int id);
     }
 }

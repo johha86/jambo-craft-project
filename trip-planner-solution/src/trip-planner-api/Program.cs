@@ -14,7 +14,7 @@ var databaseSettings = builder.Configuration.GetSection("TripPlannerDatabase");
 builder.Services.Configure<TripPlannerDatabaseSettings>(databaseSettings);
 
 //  repositories
-if(string.IsNullOrEmpty(databaseSettings["ConnectionString"]))
+if (string.IsNullOrEmpty(databaseSettings["ConnectionString"]))
 {
     builder.Services.AddSingleton<ICitiyRepository, FixedCityRepository>();
 }

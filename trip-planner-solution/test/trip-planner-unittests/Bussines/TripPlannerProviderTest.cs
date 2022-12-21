@@ -1,16 +1,16 @@
-using System.Threading.Tasks;
-using TripPlannerApi.DataAccessLayer;
-using Xunit;
-using Moq;
-using System.Collections.Generic;
-using TripPlannerApi.Models.Entities;
-using System;
-using TripPlannerApi.BussinesLayer;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Moq;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using TripPlannerApi.BussinesLayer;
 using TripPlannerApi.Configurations;
+using TripPlannerApi.DataAccessLayer;
+using TripPlannerApi.Models.Entities;
+using Xunit;
 
-namespace TripPlannerApiUnitTests.DataAccess
+namespace TripPlannerApiUnitTests.Bussines
 {
     public class TripPlannerProviderTest
     {
@@ -20,7 +20,7 @@ namespace TripPlannerApiUnitTests.DataAccess
         public TripPlannerProviderTest()
         {
             _loggerMock = new Mock<ILogger<TripPlannerProvider>>();
-            _someOptions = Options.Create<PollySettings>(new PollySettings() { RetryCount = 4 });
+            _someOptions = Options.Create(new PollySettings() { RetryCount = 4 });
 
             _citiesCollection = new List<City>
             {
@@ -34,9 +34,9 @@ namespace TripPlannerApiUnitTests.DataAccess
                 }
             };
 
-            static Weather CreateNewWeatherForcast()
+            static WeatherForecast CreateNewWeatherForcast()
             {
-                return new Weather()
+                return new WeatherForecast()
                 {
                     Summary = RandomWeatherRepository.Summaries[Random.Shared.Next(RandomWeatherRepository.Summaries.Length)],
                     Temperature = Random.Shared.Next(-20, 55).ToString()
@@ -63,7 +63,7 @@ namespace TripPlannerApiUnitTests.DataAccess
         public async Task Should_Return_A_Empty_Cities_Collection()
         {
             //  Arrange
-            var citiesCollection= new List<City>();
+            var citiesCollection = new List<City>();
             var cityRepoMock = new Mock<ICitiyRepository>();
             cityRepoMock.Setup(e => e.GetAllAsync()).ReturnsAsync(citiesCollection);
             var tripProvider = new TripPlannerProvider(cityRepoMock.Object, _someOptions, _loggerMock.Object);
