@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject } from '@angular/core';
-import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -16,8 +16,8 @@ export class HomeComponent {
   };
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<CityInfoDto[]>('https://trip-planner-api20221220213642.azurewebsites.net/' + 'foo').subscribe(result => {
-      this.forecasts = result;
+    http.get<TripPlannerDto>(`${environment.apiURL}City`).subscribe(result => {
+      this.forecasts = result.citiesInfo;
     }, error => console.error(error));
   }
 
@@ -32,3 +32,8 @@ interface CityInfoDto {
   currentWeather: string;
   currentWeekWeather: string;
 }
+
+interface TripPlannerDto {
+  citiesInfo:CityInfoDto[]
+}
+

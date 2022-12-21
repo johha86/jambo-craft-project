@@ -17,23 +17,24 @@
     </div>
 
     
-
-    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-      <ngb-panel title="Short Description" (shown)="true">
-        <ng-template ngbPanelContent>
-          {{ selectedCity.shortDescription }}
-        </ng-template>
-      </ngb-panel>
-      <ngb-panel title="Current Weather" (shown)="true">
-        <ng-template ngbPanelContent>
-          {{ selectedCity.currentWeather }}
-        </ng-template>
-      </ngb-panel>
-      <ngb-panel title="Current Week Weather" (shown)="true">
-        <ng-template ngbPanelContent>
-          {{ selectedCity.currentWeekWeather }}
-        </ng-template>
-      </ngb-panel>
-    </ngb-accordion>
+    <div class="col">
+      <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel title="Short Description" (shown)="true">
+          <ng-template ngbPanelContent>
+            {{ selectedCity.shortDescription }}
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel title="Current Weather" (shown)="true">
+          <ng-template ngbPanelContent>
+            {{ selectedCity.currentWeather }}
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel title="Current Week Weather" (shown)="true">
+          <ng-template ngbPanelContent>
+            {{ selectedCity.currentWeekWeather }}
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>    
 	</div>
 </div>
