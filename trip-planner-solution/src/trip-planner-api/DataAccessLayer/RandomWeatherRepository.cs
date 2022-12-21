@@ -2,6 +2,11 @@
 
 namespace TripPlannerApi.DataAccessLayer
 {
+    /// <summary>
+    /// Implementation of a <see cref="IWeatherRepository"/> that provide weather forcast for a city
+    /// without connect to a database or external provider. An alternative could be use a BackgroundService
+    /// that fetch periodically the forecast information and update it into the <see cref="City"/> object inside DB.
+    /// </summary>
     public class RandomWeatherRepository : IWeatherRepository
     {
         public static readonly string[] Summaries = new[]

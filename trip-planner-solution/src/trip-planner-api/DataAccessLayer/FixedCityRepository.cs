@@ -3,7 +3,7 @@
 namespace TripPlannerApi.DataAccessLayer
 {
     /// <summary>
-    /// City repository that doesnt use any connection and operate with fixed cities.
+    /// City repository that doesn't use any database connection and operate with fixed cities.
     /// </summary>
     public class FixedCityRepository : ICitiyRepository
     {

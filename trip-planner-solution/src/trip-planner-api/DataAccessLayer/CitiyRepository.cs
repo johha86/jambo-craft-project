@@ -5,6 +5,10 @@ using TripPlannerApi.Models.Entities;
 
 namespace TripPlannerApi.DataAccessLayer
 {
+    /// <summary>
+    /// Implementation of a <see cref="ICitiyRepository"/> that connect to a MongoDB database
+    /// to retrieve the information for on cities.
+    /// </summary>
     public class CitiyRepository : ICitiyRepository
     {
         private readonly IMongoCollection<City> _citiesCollection;
