@@ -23,8 +23,7 @@ namespace TripPlannerApi.DataAccessLayer
         public async Task<City> GetAsync(int id) =>
           await (await _citiesCollection.FindAsync(x => x.Id == id)).FirstOrDefaultAsync();
 
-        public async Task<List<City>> GetAllAsync() =>        
+        public async Task<List<City>> GetAllAsync() =>
             await (await _citiesCollection.FindAsync(_ => true)).ToListAsync();
-
     }
 }

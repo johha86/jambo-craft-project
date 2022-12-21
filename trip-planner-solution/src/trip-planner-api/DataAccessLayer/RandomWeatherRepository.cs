@@ -9,14 +9,19 @@ namespace TripPlannerApi.DataAccessLayer
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        public Task<Weather> GetCurrentWeatherForCity(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<Weather> GetCurrentWeatherForCity(int id) =>
+            await Task.FromResult(CreateNewWeatherForcast());
 
-        public Task<Weather> GetCurrentWeekWeatherForCity(int id)
+        public async Task<Weather> GetCurrentWeekWeatherForCity(int id) =>
+            await Task.FromResult(CreateNewWeatherForcast());
+
+        static Weather CreateNewWeatherForcast()
         {
-            throw new NotImplementedException();
+            return new Weather()
+            {
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)],
+                Temperature = Random.Shared.Next(-20, 55).ToString()
+            };
         }
     }
 }
