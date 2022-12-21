@@ -6,18 +6,18 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './fetch-data.component.html'
 })
 export class FetchDataComponent {
-  public forecasts: WeatherForecast[] = [];
+  public forecasts: CityInfoDto[] = [];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<WeatherForecast[]>(baseUrl + 'weatherforecast').subscribe(result => {
+    http.get<CityInfoDto[]>('https://trip-planner-api20221220213642.azurewebsites.net/' + 'foo').subscribe(result => {
       this.forecasts = result;
     }, error => console.error(error));
   }
 }
 
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+interface CityInfoDto {
+  name: string;
+  shortDescription: string;
+  currentWeather: string;
+  currentWeekWeather: string;
 }
