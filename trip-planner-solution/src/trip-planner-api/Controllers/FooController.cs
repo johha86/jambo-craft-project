@@ -3,6 +3,7 @@ using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using TripPlannerApi.Configurations;
 using TripPlannerApi.DataAccessLayer;
+using TripPlannerApi.Models.DTOs;
 using TripPlannerApi.Models.Entities;
 
 namespace TripPlannerApi.Controllers
@@ -68,9 +69,19 @@ namespace TripPlannerApi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<City> Get()
+        public IEnumerable<CityInfoDto> Get()
         {
-            return _citiesCollection.Find(_ => true).ToEnumerable();
+            return _citiesCollection.Find(_ => true).ToEnumerable().Select<City, CityInfoDto>(x =>
+            new CityInfoDto()
+            {
+                Name = x.Name,
+                ShortDescription = x.ShortDescription,
+                CurrentWeather = x.CurrentWeather.ToString(),
+                CurrentWeekWeather = x.CurrentWeekWeather.ToString()
+            });
+            //var list = new List<CityInfoDto>();
+            //list.Add(new CityInfoDto() { Name = "Ciudad Foo", CurrentWeather="34", CurrentWeekWeather = "64", ShortDescription = "Lorem Ipsum foo"});
+            //return list;
         }
     }
 }
