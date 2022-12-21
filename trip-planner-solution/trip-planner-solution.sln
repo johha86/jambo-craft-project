@@ -34,11 +34,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{35AC62D2-409
 		src\ClientApp\src\test.ts = src\ClientApp\src\test.ts
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trip-planner-api", "src\trip-planner-api\trip-planner-api.csproj", "{231AADE1-40E4-4FD3-AB1C-63975CED0D79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "trip-planner-api", "src\trip-planner-api\trip-planner-api.csproj", "{231AADE1-40E4-4FD3-AB1C-63975CED0D79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{01A914E5-1786-436F-8A37-76902B7AC249}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trip-planner-unittests", "test\trip-planner-unittests\trip-planner-unittests.csproj", "{598F1C35-2949-4F9F-AB74-BDD30E23DB4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "trip-planner-unittests", "test\trip-planner-unittests\trip-planner-unittests.csproj", "{598F1C35-2949-4F9F-AB74-BDD30E23DB4F}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{44E67CBC-547B-40CB-94DB-1192696E723F}"
 EndProject
@@ -46,6 +46,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infra", "infra", "{CF4D1923-F1DA-4F82-83DA-F8599DCC41BA}"
+	ProjectSection(SolutionItems) = preProject
+		infra\mongoImportAll.cmd = infra\mongoImportAll.cmd
+		mongoSeed.json = mongoSeed.json
 	EndProjectSection
 EndProject
 Global

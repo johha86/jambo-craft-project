@@ -1,4 +1,4 @@
-namespace trip_planner_api
+namespace TripPlannerApi
 {
     public class WeatherForecast
     {

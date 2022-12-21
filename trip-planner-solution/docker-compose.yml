@@ -7,8 +7,18 @@ services:
       context: .
       dockerfile: src/trip-planner-api/Dockerfile
 
-  trip-planner-app:
-    image: ${DOCKER_REGISTRY-}tripplannerapp
-    build:
-      context: .
-      dockerfile: src/ClientApp/Dockerfile
+  #trip-planner-app:
+  #  image: ${DOCKER_REGISTRY-}tripplannerapp
+  #  build:
+  #    context: .
+  #    dockerfile: src/ClientApp/Dockerfile
+  ############################
+  # MongoDB service
+  ############################
+  mongo-db:
+    container_name: mongo-db
+    image: "mongo"
+    ports:
+      - "27017:27017"    
+    volumes:               # uncomment this if you want to use a local mongodb
+      - "./mongodb:/data/db"
