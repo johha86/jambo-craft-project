@@ -1,4 +1,4 @@
-<p *ngIf="!forecasts"><em>Loading...</em></p>
+<p *ngIf="!cities"><em>Loading...</em></p>
 
 <div class="row">
 	<div class="col">
@@ -10,8 +10,8 @@
 				{{selectedCity.name === ''?'Please Select a City': selectedCity.name}}
 			</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <div *ngFor="let forecast of forecasts">
-            <button ngbDropdownItem (click)="OnSelectCity(forecast)">{{ forecast.name }}</button>
+          <div *ngFor="let city of cities">
+            <button ngbDropdownItem (click)="OnSelectCity(city)">{{ city.name }}</button>
           </div>
       </div>
     </div>

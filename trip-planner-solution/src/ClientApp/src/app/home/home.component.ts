@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
-  public forecasts: CityInfoDto[] = [];
+  public cities: CityInfoDto[] = [];
   public selectedCity: CityInfoDto = {
     name: '',
     shortDescription: '',
@@ -17,7 +17,7 @@ export class HomeComponent {
 
   constructor(http: HttpClient) {
     http.get<TripPlannerDto>(`${environment.apiURL}City`).subscribe(result => {
-      this.forecasts = result.citiesInfo;
+      this.cities = result.citiesInfo;
     }, error => console.error(error));
   }
 
