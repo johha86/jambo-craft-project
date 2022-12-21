@@ -1,5 +1,6 @@
 using TripPlannerApi.Configurations;
 using TripPlannerApi.DataAccessLayer;
+using TripPlannerApi.Integration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,9 @@ else
     builder.Services.AddSingleton<ICitiyRepository, CitiyRepository>();
 }
 builder.Services.AddSingleton<IWeatherRepository, RandomWeatherRepository>();
+
+//  background services
+builder.Services.AddHostedService<WeatherForcastBackgroundService>();
 
 var app = builder.Build();
 
