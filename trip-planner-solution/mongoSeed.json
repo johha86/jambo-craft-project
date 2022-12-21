@@ -1,0 +1,45 @@
+{
+  "version": "2022-12-20",
+  "name": "Calgary",
+  "shortDescription": "Calgary is the largest city in the western Canadian province of Alberta and the largest metro area of the three Prairie Provinces.",
+  "currentWeather": {
+    "temperature": "28",
+    "summary": "Scorching"
+  },
+  "currentWeekWeather": {
+    "temperature": "-9",
+    "summary": "Balmy"
+  },
+  "id": 1,
+  "eTag": null
+},
+  {
+    "version": "2022-12-20",
+    "name": "Ottawa",
+    "shortDescription": "Ottawa borders Gatineau, Quebec, and forms the core of the Ottawa–Gatineau census metropolitan area (CMA) and the National Capital Region",
+    "currentWeather": {
+      "temperature": "-8",
+      "summary": "Warm"
+    },
+    "currentWeekWeather": {
+      "temperature": "16",
+      "summary": "Scorching"
+    },
+    "id": 2,
+    "eTag": null
+  },
+  {
+    "version": "2022-12-20",
+    "name": "La Habana",
+    "shortDescription": "La Habana is the capital and largest city of Cuba.",
+    "currentWeather": {
+      "temperature": "27",
+      "summary": "Balmy"
+    },
+    "currentWeekWeather": {
+      "temperature": "2",
+      "summary": "Cool"
+    },
+    "id": 3,
+    "eTag": null
+  }

@@ -11,16 +11,20 @@ namespace TripPlannerApi.DataAccessLayer
 
         public CitiyRepository(IOptions<TripPlannerDatabaseSettings> tripPlannerDatabaseSettings)
         {
+            var mongoClient = new MongoClient(
+            tripPlannerDatabaseSettings.Value.ConnectionString);
 
-        }
-        public Task<City> Get(Guid id)
-        {
-            throw new NotImplementedException();
+            var mongoDatabase = mongoClient.GetDatabase(
+                tripPlannerDatabaseSettings.Value.DatabaseName);
+
+            _citiesCollection = mongoDatabase.GetCollection<City>(tripPlannerDatabaseSettings.Value.CitiesCollectionName);
         }
 
-        public Task<City> GetAll()
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<City> GetAsync(int id) =>
+          await (await _citiesCollection.FindAsync(x => x.Id == id)).FirstOrDefaultAsync();
+
+        public async Task<List<City>> GetAllAsync() =>        
+            await (await _citiesCollection.FindAsync(_ => true)).ToListAsync();
+
     }
 }

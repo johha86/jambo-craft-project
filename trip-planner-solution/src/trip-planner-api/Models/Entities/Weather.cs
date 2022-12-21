@@ -6,10 +6,10 @@ namespace TripPlannerApi.Models.Entities
     public class Weather
     {
         public string Temperature { get; set; } = null!;
-        public string Humidity { get; set; } = null!;
+        public string Summary { get; set; } = null!;
         public override string ToString()
         {
-            return $"Temp: {Temperature} Hum: {Humidity}";
+            return $"Temp: {Temperature} Sum: {Summary}";
         }
     }
 }

@@ -1,3 +1,5 @@
+using TripPlannerApi.Configurations;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +8,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.Configure<TripPlannerDatabaseSettings>(
+    builder.Configuration.GetSection("TripPlannerDatabase"));
 
 var app = builder.Build();
 

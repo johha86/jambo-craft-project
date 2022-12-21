@@ -7,7 +7,7 @@ namespace TripPlannerApi.DataAccessLayer
     /// </summary>
     public interface ICitiyRepository
     {
-        public Task<City> Get(Guid id);
-        public Task<City> GetAll();
+        public Task<City> GetAsync(int id);
+        public Task<List<City>> GetAllAsync();
     }
 }

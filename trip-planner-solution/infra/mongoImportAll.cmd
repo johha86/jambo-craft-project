@@ -1,0 +1,1 @@
+mongoimport --host=127.0.0.1:27017 --collection=Cities  --db=TripPlanner --file=mongoSeed.json --mode=upsert  --drop

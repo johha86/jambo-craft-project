@@ -10,6 +10,8 @@ namespace TripPlannerApi.Models.Entities
 
         public string Version { get; set; } = VERSION;
 
+        public string Name { get; set; } = null!;
+
         public string ShortDescription { get; set; } = null!;
 
         public Weather CurrentWeather { get; set; } = null!;
