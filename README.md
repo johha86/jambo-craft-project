@@ -1,5 +1,5 @@
 # Jambo Craft Project
-
+[![Build and deploy ASP.Net Core app to Azure Web App - trip-planner-api20221220213642](https://github.com/johha86/jambo-craft-project/actions/workflows/develop_trip-planner-api20221220213642.yml/badge.svg)](https://github.com/johha86/jambo-craft-project/actions/workflows/develop_trip-planner-api20221220213642.yml)
 ## Project Description
 This project is the solution for the Jambo test challenge. The main idea is using any frontend web technology with a simple backend, build a single page travel planner application.
 The proposal for this test are two projects. A web application developed in Angular to present UI user, and an API backend that receive the request to populate the frontend data.
