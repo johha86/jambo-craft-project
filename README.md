@@ -66,3 +66,4 @@ The web app service also was configured to do a new deployment if a new push hap
 * Implement the logic to connect to an external weather forcast service.
 * Implement Mongo Realm for the schemas versioning.
 * Change the Entity Id to GUID.
+* Connect logging with Application Insight

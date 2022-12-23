@@ -1,4 +1,4 @@
-<p *ngIf="!cities"><em>Loading...</em></p>
+
 
 <div class="row">
 	<div class="col">
@@ -6,7 +6,8 @@
     <h1>Trip Planner</h1>
 
     <div ngbDropdown class="d-inline-block">
-      <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+      <p *ngIf="cities.length==0"><em>Loading...</em></p>
+      <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle [disabled]="cities.length==0">
 				{{selectedCity.name === ''?'Please Select a City': selectedCity.name}}
 			</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
